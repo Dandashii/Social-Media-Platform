@@ -5,7 +5,6 @@
 	<meta name="viewport"
 	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	<link rel="stylesheet" href="/styling/main.css" type="text/css">
 	<title>ITEC404 - Homepage</title>
 	<style>
@@ -20,9 +19,9 @@
 
 		.announcements figcaption {
 			position: absolute;
-			top: 65%;
+			top: 55%;
 			-ms-transform: translateY(-70%);
-			transform: translateY(-70%);
+			transform: translateY(-65%);
 			z-index: 1;
 			height: 20%;
 			background: black;
@@ -46,8 +45,7 @@
 			width: 100%;
 			height: 87%;
 			/*background: rgb(119, 130, 149);*/
-			background: #1B3347;
-			opacity: 0.4;
+			background: rgba(67, 97, 135, 0.25);
 			position: absolute;
 			top: 0;
 		}
@@ -78,7 +76,7 @@
 
 		.nav-circle:first-child {
 			background: #848D9B;
-			border: 3px solid #B8C7DE;
+			border: 3px solid #94a0b3;
 			width: 1.8em;
 			height: 1.8em;
 		}
@@ -89,7 +87,7 @@
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-between;
-			margin-top: 5vh;
+			margin-top: 50px;
 		}
 
 		.recent {
@@ -403,10 +401,10 @@
 			<button class="menu"><iconify-icon class="nav-icons" icon="fluent-mdl2:collapse-menu"></iconify-icon><span>MENU</span></button>
 			<ul>
 				<li><a href=""><iconify-icon class="nav-icons" icon="ant-design:home-outlined"></iconify-icon><span>HOME</span></a></li>
-				<li><a href=""><iconify-icon class="nav-icons" icon="fluent:news-28-regular"></iconify-icon><span>ANNOUNCEMENTS & NEWS</span></a></li>
+				<li><a href="/announcements-news/index.php"><iconify-icon class="nav-icons" icon="fluent:news-28-regular"></iconify-icon><span>ANNOUNCEMENTS & NEWS</span></a></li>
 				<li><a href=""><iconify-icon class="nav-icons" icon="bi:file-person"></iconify-icon><span>INTERNSHIPS & JOB OFFERS</span></a></li>
 				<li><a href=""><iconify-icon class="nav-icons" icon="fluent-mdl2:cycling"></iconify-icon><span>ACTIVITIES & EVENTS</span></a></li>
-				<li><a href=""><iconify-icon class="nav-icons" icon="bytesize:archive"></iconify-icon><span>ARTICLES</span></a></li>
+				<li><a href="/articles/index.php"><iconify-icon class="nav-icons" icon="bytesize:archive"></iconify-icon><span>ARTICLES</span></a></li>
 				<li><a href=""><iconify-icon class="nav-icons" icon="fluent:hat-graduation-12-filled"></iconify-icon><span>STAFF</span></a></li>
 				<li><a href=""><iconify-icon class="nav-icons" icon="akar-icons:people-group"></iconify-icon><span>CLUBS</span></a></li>
 			</ul>
@@ -518,7 +516,6 @@
 					<h2>RECENT PUBLICATIONS</h2>
 				</div>
 
-
 				<!-- Article post container -->
 				<figure class="recent-image">
 					<img src="/media/article.png" alt="An article's image">
@@ -601,7 +598,6 @@
 		<div class="footer-nav">
 			<h3 class="footer-nav-title">Navigation</h3>
 			<ul>
-
 				<li><a href="">Home</a></li>
 				<li><a href="">Announcements & News</a></li>
 				<li><a href="">Internships & Job Offers</a></li>
@@ -632,6 +628,7 @@
 			<button type="button" class="contact-us">CONTACT US</button>
 		</section>
 	</footer>
+	<script src="/icons/iconify-icon/iconify-icon.min.js"></script>
 	<script src="/scripts/main.js" type="text/javascript"></script>
 </body>
 </html>

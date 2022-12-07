@@ -1,5 +1,6 @@
 let dropDownStatus = false;
 let menuBtn = document.querySelector('.menu');
+
 menuBtn.onclick = function(e) {
 	let	nav = document.querySelector('nav');
 	let navList = document.querySelector('nav ul');
@@ -23,3 +24,5 @@ menuBtn.onclick = function(e) {
 		dropDownStatus = false;
 	}
 };
+
+

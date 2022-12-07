@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	<link rel="stylesheet" href="/styling/main.css" type="text/css">
-	<title>Announcement page</title>
+	<title><?php ?></title>
 	<style>
 
 	</style>

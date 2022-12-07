@@ -7,8 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 	<link rel="stylesheet" href="/styling/main.css" type="text/css">
-	<link rel="stylesheet" href="../styling/announcements.css">
-	<title>Announcement page</title>
+	<link rel="stylesheet" href="../styling/activities-events.css">
+	<title>Activities & Events</title>
 </head>
 <body>
 	<header>
@@ -23,7 +23,7 @@
 			<iconify-icon class="header-icon" icon="ic:baseline-notifications"></iconify-icon>
 		</div>
 		<div class="title-container">
-			<a href="index.html"><img src="/media/EMU-Logo.svg" alt="EMU Logo"></a>
+			<a href="../index.php"><img src="/media/EMU-Logo.svg" alt="EMU Logo"></a>
 			<h1>SCHOOL OF COMPUTER & TECHNOLOGY</h1>
 		</div>
 		<nav>
@@ -43,8 +43,8 @@
 
 	<main>
 		<div class="section-nav">
-			<button class="section-btn current">ANNOUNCEMENTS</button>
-			<button class="section-btn">NEWS</button>
+			<button class="section-btn current">ACTIVITIES</button>
+			<button class="section-btn">EVENTS</button>
 		</div>
 
 		<div class="search-sort-container">
@@ -58,79 +58,63 @@
 			<button type="button" class="sort-btn"><span>SORT BY</span> <i class="arrow down"></i></button>
 		</div>
 
-		<section class="announcements">
-			<article class="announcement-post">
-				<div class="announcement-top">
-					<h2>This is an announcement’s main title</h2>
-					<p>Views: 256</p>
-					<p>Ratings: 256</p>
-				</div>
-				<p class="announcement-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
-				<div class="announcement-bottom">
-					<p>By Mohammad Aldandashi</p>
-					<p>Date: 01/01/2000</p>
-				</div>
-			</article>
-			<article class="announcement-post">
-				<div class="announcement-top">
-					<h2>This is an announcement’s main title</h2>
-					<p>Views: 256</p>
-					<p>Ratings: 256</p>
-				</div>
-				<p class="announcement-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
-				<div class="announcement-bottom">
-					<p>By Mohammad Aldandashi</p>
-					<p>Date: 01/01/2000</p>
+		<section class="activities">
+			<article class="activity-post">
+				<img src="../media/recent-news.jpg" alt="Activity Picture">
+				<div class="activity-details">
+					<div class="activity-title">
+						<iconify-icon class="header-icon" icon="fluent:person-running-20-regular"></iconify-icon>
+						<h2>This is the activitiy’s name</h2>
+					</div>
+					<p class="activity-date">Every Monday from 10am - 5pm</p>
+					<p class="activity-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
+					<p class="activity-loc">Location: <span>Glapsides</span></p>
+					<p class="activity-datePost">Date of post: 01/01/2000</p>
 				</div>
 			</article>
-			<article class="announcement-post">
-				<div class="announcement-top">
-					<h2>This is an announcement’s main title</h2>
-					<p>Views: 256</p>
-					<p>Ratings: 256</p>
-				</div>
-				<p class="announcement-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
-				<div class="announcement-bottom">
-					<p>By Mohammad Aldandashi</p>
-					<p>Date: 01/01/2000</p>
-				</div>
-			</article>
-			<article class="announcement-post">
-				<div class="announcement-top">
-					<h2>This is an announcement’s main title</h2>
-					<p>Views: 256</p>
-					<p>Ratings: 256</p>
-				</div>
-				<p class="announcement-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
-				<div class="announcement-bottom">
-					<p>By Mohammad Aldandashi</p>
-					<p>Date: 01/01/2000</p>
+
+			<article class="activity-post">
+				<img src="../media/recent-news.jpg" alt="Activity Picture">
+				<div class="activity-details">
+					<div class="activity-title">
+						<iconify-icon class="header-icon" icon="fluent:person-running-20-regular"></iconify-icon>
+						<h2>This is the activitiy’s name</h2>
+					</div>
+					<p class="activity-date">Every Monday from 10am - 5pm</p>
+					<p class="activity-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
+					<p class="activity-loc">Location: <span>Glapsides</span></p>
+					<p class="activity-datePost">Date of post: 01/01/2000</p>
 				</div>
 			</article>
-			<article class="announcement-post">
-				<div class="announcement-top">
-					<h2>This is an announcement’s main title</h2>
-					<p>Views: 256</p>
-					<p>Ratings: 256</p>
-				</div>
-				<p class="announcement-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
-				<div class="announcement-bottom">
-					<p>By Mohammad Aldandashi</p>
-					<p>Date: 01/01/2000</p>
-				</div>
-			</article>
-			<article class="announcement-post">
-				<div class="announcement-top">
-					<h2>This is an announcement’s main title</h2>
-					<p>Views: 256</p>
-					<p>Ratings: 256</p>
-				</div>
-				<p class="announcement-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
-				<div class="announcement-bottom">
-					<p>By Mohammad Aldandashi</p>
-					<p>Date: 01/01/2000</p>
+
+			<article class="activity-post">
+				<img src="../media/recent-news.jpg" alt="Activity Picture">
+				<div class="activity-details">
+					<div class="activity-title">
+						<iconify-icon class="header-icon" icon="fluent:person-running-20-regular"></iconify-icon>
+						<h2>This is the activitiy’s name</h2>
+					</div>
+					<p class="activity-date">Every Monday from 10am - 5pm</p>
+					<p class="activity-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
+					<p class="activity-loc">Location: <span>Glapsides</span></p>
+					<p class="activity-datePost">Date of post: 01/01/2000</p>
 				</div>
 			</article>
+
+			<article class="activity-post">
+				<img src="../media/recent-news.jpg" alt="Activity Picture">
+				<div class="activity-details">
+					<div class="activity-title">
+						<iconify-icon class="header-icon" icon="fluent:person-running-20-regular"></iconify-icon>
+						<h2>This is the activitiy’s name</h2>
+					</div>
+					<p class="activity-date">Every Monday from 10am - 5pm</p>
+					<p class="activity-desc">To insure that that speed test you run our website is accurate and reliable, we recommend you take the following steps.....</p>
+					<p class="activity-loc">Location: <span>Glapsides</span></p>
+					<p class="activity-datePost">Date of post: 01/01/2000</p>
+				</div>
+			</article>
+
 		</section>
 
 		<ol class="pagination">
@@ -181,6 +165,7 @@
 			<button type="button" class="contact-us">CONTACT US</button>
 		</section>
 	</footer>
+	<script src="/icons/iconify-icon/iconify-icon.min.js"></script>
 	<script src="/scripts/main.js" type="text/javascript"></script>
 </body>
 </html>
