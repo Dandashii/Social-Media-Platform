@@ -29,7 +29,8 @@
 		}
 
 		.announcement-post {
-			background: rgba(53, 53, 53, 0.5);
+			background: linear-gradient(180deg, rgba(43, 43, 43, 0.5) 0%, rgba(28, 33, 49, 0.245) 100%);
+			mix-blend-mode: normal;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			display: flex;
 			flex-flow: column nowrap;
@@ -37,15 +38,24 @@
 			gap: 5px;
 		}
 
-		.announcement-post:nth-child(even) {
-			background: rgba(112, 108, 108, 0.7);
+		.announcement-post:first-child {
+			background: linear-gradient(180deg, rgba(67, 172, 230, 0.5) 0%, rgba(71, 82, 177, 0.245) 100%);
+			mix-blend-mode: normal;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		}
 
 		.announcement-top {
 			display: flex;
 			flex-flow: row nowrap;
+			align-items: center;
+			align-content: center;
 			width: 98%;
-			gap: 20px;
+			gap: 2px;
+		}
+
+		.announcement-title-icon {
+			font-size: 30px;
+			margin-bottom: 3px;
 		}
 
 		.announcement-title {
@@ -66,10 +76,18 @@
 		.announcement-bottom {
 			display: flex;
 			flex-flow: row nowrap;
-			width: 98%; font-style: normal;
+			align-items: center;
+			width: 98%;
+			font-style: normal;
 			font-weight: 400;
 			font-size: 15px;
 			margin-top: 5px;
+			gap: 5px;
+		}
+
+		.announcement-author-icon {
+			font-size: 25px;
+			margin-bottom: 3px;
 		}
 
 		.announcement-author {
@@ -88,12 +106,14 @@
 			margin: 40px auto;
 			gap: 100px;
 		}
+
 		.news-post {
 			width: 350px;
 			height: 425px;
-			background: #292929;
+			background: linear-gradient(180deg, #404246 0%, rgba(14, 14, 14, 0.49) 100%);
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			border-radius: 30px;
+			position: relative;
 		}
 
 		.news-post img {
@@ -105,7 +125,7 @@
 		}
 
 		.news-title {
-			font-weight: 800;
+			font-weight: bold;
 			font-size: 18px;
 			width: 92.5%;
 			margin-right: auto;
@@ -121,12 +141,19 @@
 			line-height: 22px;
 		}
 
+		.news-bottom {
+			position: absolute;
+			bottom: 0;
+			right: 18px;
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+
 		.news-postDate {
 			font-weight: 300;
 			font-size: 14px;
-			margin: 26% auto 0 auto;
 			text-align: right;
-			width: 88%;
 		}
 	</style>
 </head>
@@ -244,11 +271,7 @@
 					}
 
 					for(let post in postList['posts']) {
-						if(section === 'news') {
-							document.querySelector(`.${section}`).appendChild(createNews(postList['posts'], post));
-						} else if (section === 'announcements') {
-							document.querySelector(`.${section}`).appendChild(createAnnouncement(postList['posts'], post));
-						}
+						document.querySelector(`.${section}`).innerHTML += createPost(section, postList['posts'], post);
 					}
 
 					document.querySelector(`.${section}`).style.display = 'flex';
@@ -290,15 +313,38 @@
 			}
 		}
 
-		function createPost(section) {
+		function createPost(section, postsArr, index) {
 			let post;
 
 			switch(section) {
 				case 'announcements':
-					post = ``;
+					post = `
+							<article class='announcement-post'>
+								<div class='announcement-top'>
+									<iconify-icon class='announcement-title-icon' icon='emojione-v1:speaker-low-volume'></iconify-icon>
+									<h2>${postsArr[index]['title']}</h2>
+								</div>
+								<p class='announcement-desc'>${postsArr[index]['description']}</p>
+								<div class='announcement-bottom'>
+									<iconify-icon class="announcement-author-icon" icon='material-symbols:person'></iconify-icon>
+									<p class="announcement-author">By ${postsArr[index]['author']}</p>
+
+									<iconify-icon style="color: #2385B0;" icon="ic:round-access-time-filled"></iconify-icon>
+									<p>${postsArr[index]['postDate']}</p>
+								</div>
+							</article>`;
 					break;
 				case 'news':
-					post = ``;
+					post = `
+							<article class='news-post'>
+								<img src='../media/article.png' alt='News post'>
+								<h2 class='news-title'>${postsArr[index]['title']}</h2>
+								<p class='news-desc'>${postsArr[index]['description']}</p>
+								<div class='news-bottom'>
+									<iconify-icon style="color: #2385B0;" icon="ic:round-access-time-filled"></iconify-icon>
+									<p class='news-postDate'>${postsArr[index]['postDate']}</p>
+								</div>
+							</article>`;
 					break;
 				default:
 					return `Cannot create posts for the unknown section of ${section}`;
@@ -306,72 +352,7 @@
 
 			return post;
 		}
-
-		function createAnnouncement(postList, post) {
-			let announcementPost = document.createElement('article');
-			announcementPost.className = 'announcement-post';
-
-			let announcementTop = document.createElement('div');
-			announcementTop.className = 'announcement-top';
-
-			let announcementTitle = document.createElement('h2');
-			announcementTitle.className = 'announcement-title';
-			announcementTitle.innerText = postList[post].title;
-
-			let announcementDesc = document.createElement('p');
-			announcementDesc.className = 'announcement-desc';
-			announcementDesc.innerText = postList[post].description;
-
-			let announcementBottom = document.createElement('div');
-			announcementBottom.className = 'announcement-bottom';
-
-			let announcementAuthor = document.createElement('p');
-			announcementAuthor.className = 'announcement-author';
-			announcementAuthor.innerText = postList[post].author;
-
-			let announcementDate = document.createElement('p');
-			announcementDate.className = 'announcement-date';
-			announcementDate.innerText = postList[post].postDate;
-
-			announcementTop.appendChild(announcementTitle);
-
-			announcementBottom.appendChild(announcementAuthor);
-			announcementBottom.appendChild(announcementDate);
-
-			announcementPost.appendChild(announcementTop);
-			announcementPost.appendChild(announcementDesc);
-			announcementPost.appendChild(announcementBottom);
-
-			return announcementPost;
-		}
-
-		function createNews(postList, post) {
-			let newsPost = document.createElement('article');
-			newsPost.className = 'news-post';
-
-			let newsImage = document.createElement('img');
-			newsImage.src = '../media/article.png';
-			newsImage.alt = 'News post title inserted here';
-
-			let newsTitle = document.createElement('h2');
-			newsTitle.className = 'news-title';
-			newsTitle.innerText = postList[post].title;
-
-			let newsDesc = document.createElement('p');
-			newsDesc.className = 'news-desc';
-			newsDesc.innerText = postList[post].description;
-
-			let newsDate = document.createElement('p');
-			newsDate.className = 'news-postDate';
-			newsDate.innerText = postList[post].postDate;
-
-			newsPost.appendChild(newsImage);
-			newsPost.appendChild(newsTitle);
-			newsPost.appendChild(newsDesc);
-			newsPost.appendChild(newsDate);
-
-			return newsPost;
-		}
+		
 	</script>
 </body>
 </html>
