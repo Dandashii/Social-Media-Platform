@@ -1,9 +1,9 @@
 This is the graduation project for the ITEC404 course belonging to the "Information Technology" department at Eastern Mediterranean University (EMU).
 
 <h1> The Figma design of the website </h1>
-<img width="300" alt="Homepage - signup" src="https://user-images.githubusercontent.com/9285042/206321225-036af058-9aba-4d2f-b16a-44a700beb056.png">
-<img width="300" alt="Homepage - Login" src="https://user-images.githubusercontent.com/9285042/206321340-9835bc58-bcae-4049-a225-5870f87234a0.png">
-<img width="300" alt="Homepage" src="https://user-images.githubusercontent.com/9285042/206321352-1821aed5-0522-4a98-835d-293b6c579384.png">
+<img style="display:inline-block;" width="300" alt="Homepage - signup" src="https://user-images.githubusercontent.com/9285042/206321225-036af058-9aba-4d2f-b16a-44a700beb056.png">
+<img style="display:inline-block;" width="300" alt="Homepage - Login" src="https://user-images.githubusercontent.com/9285042/206321340-9835bc58-bcae-4049-a225-5870f87234a0.png">
+<img  style="display:inline-block;" width="300" alt="Homepage" src="https://user-images.githubusercontent.com/9285042/206321352-1821aed5-0522-4a98-835d-293b6c579384.png">
 <img width="300" alt="Homepage - friends" src="https://user-images.githubusercontent.com/9285042/206321322-1db54965-44dc-4502-9d58-9224b0fc460c.png">
 <img width="300" alt="Homepage - chat" src="https://user-images.githubusercontent.com/9285042/206321245-a57d53b2-531e-4831-b210-f14f96431d4d.png">
 <img width="300" alt="Homepage - clubs" src="https://user-images.githubusercontent.com/9285042/206321298-9faebf59-6043-4c2e-8ae1-e120073ef249.png">
